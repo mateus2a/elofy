@@ -5,15 +5,14 @@ class Collaborator extends Model {
     super.init({ 
       name: Sequelize.STRING,
       height: Sequelize.DOUBLE,
-      lactose: Sequelize.DOUBLE,
+      lactose: Sequelize.BOOLEAN,
       weight: Sequelize.DOUBLE,
-      athlete: Sequelize.DOUBLE,
+      athlete: Sequelize.BOOLEAN,
     },
     {
       sequelize,
-    }
-    )
+    })
   }
 }
 
-export default Model
+export default Collaborator

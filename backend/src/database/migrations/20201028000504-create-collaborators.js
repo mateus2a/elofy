@@ -18,16 +18,18 @@ module.exports = {
         allowNull: false,
       },
       lactose: {
-        type: Sequelize.DOUBLE,
+        type: Sequelize.BOOLEAN,
         allowNull: false,
+        defaultValue: false,
       },
       weight: {
         type: Sequelize.DOUBLE,
         allowNull: false,
       },
       athlete: {
-        type: Sequelize.DOUBLE,
+        type: Sequelize.BOOLEAN,
         allowNull: false,
+        defaultValue: false,
       },
       created_at: {
         type: Sequelize.DATE,
