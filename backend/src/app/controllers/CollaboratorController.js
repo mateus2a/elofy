@@ -2,17 +2,24 @@ import Collaborator from '../models/Collaborator';
 
 class UserController {
   async store(req, res) {
-    const { id, name, height, weight } = await Collaborator.create(req.body)
+    const { name, height, weight } = await Collaborator.create(req.body)
 
     return res.json({ id, name, height, weight })
   }
 
-  async update() {
+  async update(req, res) {
+    
 
   }
 
-  async delete() {
+  async delete(req, res) {
+    const id = req.params.id;
 
+    Collaborator.destroy({
+      where: { id: id } 
+    })
+
+    return res.send()
   }
 }
 
